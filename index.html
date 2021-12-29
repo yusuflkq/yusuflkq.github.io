@@ -1,240 +1,78 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Google Fots -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <!-- Main CSS -->
-      <link href="assets/css/main.css" rel="stylesheet">
-
-
-    <title>Yusuf Qureshi - Portfolio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | UPWORK</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-   
-    <!-- header -->
-    <header class="ds-header" id="site-header">
-        <div class="container">
-            <div class="ds-header-inner">
-              <!-- logo -->
-              <a href="index.html" class="ds-logo">
-                <span>Y</span>Yusuf Qureshi
-              </a>
-              <!-- logo -->
-              <!-- social -->
-              <ul class="ds-social">
-                <!--<li><a href="#" target="_blank"><i class="ri-github-fill"></i></a></li>-->
-                <!--<li><a href="#" target="_blank"><i class="ri-stack-overflow-line"></i></a></li>-->
-                <!--<li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>-->
-              </ul>
-              <!-- social -->
-            </div>
-        </div>
-    </header>
-    <!-- header -->
-    <!-- banner -->
-    <div class="ds-banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-            <figure>
-              <img src="assets/images/profile-image.jpg">
-            </figure>
-          </div>
-          <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-            <section>
-                <h1>
-                  <span>HI THERE</span>
-                  I’m Yusuf Qureshi <br> A UNITY/C# DESIGNER + DEVELOPER<br> based in Ireland.
-                </h1>
-                <ul class="ds-numbervalulist">
-                  <li>
-                    <strong>7+</strong>
-                    <span>YRS Experience</span>
-                  </li>
-                  <li>
-                    <strong>5</strong>
-                    <span>Projects</span>
-                  </li>
-                  <li>
-                    <strong>3</strong>
-                    <span>Current Clients</span>
-                  </li>
-                </ul>
-            </section>
-          </div>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-    </div>
-    <!-- banner -->
-
-    <!-- about -->
-    <div class="ds-about-section">
-      <div class="container">
-        <section>
-            <h2 class="ds-heading">About Me</h2>
-            <p>I am a Computer Science student from Ireland studying at the University of Aberdeen. With over 7 years experience creating interactive experiences in Unity.</p>
-            <p>First starting off with a passion in indie game development, then moving towards multiplayer networked browser games. I currently work for Reamda Limited as a software developer. Producing Real-Time Networked Robotic Simulations.</p>
-
-            <!--<div class="ds-button-sec text-center">
-                <a href="#" class="ds-button">Download Resume</a>
-            </div>-->
-        </section>
+      <div id="unity-mobile-warning">
+        WebGL builds are not supported on mobile devices.
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">UPWORK</div>
       </div>
     </div>
-    <!-- about -->
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Builds.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Builds.data.gz",
+        frameworkUrl: buildUrl + "/Builds.framework.js.gz",
+        codeUrl: buildUrl + "/Builds.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "UPWORK",
+        productVersion: "0.1",
+      };
 
-    <!--  Skills -->
-    <div class="ds-skills-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-             <h2 class="ds-heading">Core Skills</h2>
-             <ul class="ds-skills-list">
-               <li>C#</li>
-               <li>UNITY</li>
-               <li>MULTIPLAYER NETWORKING</li>
-               <li>Mirror</li>
-               <li>Photon</li>
-               <li>HTML</li>
-               <li>CSS</li>
-               <li>JS</li>
-               <li>Github</li>
-             </ul>
-          </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-            <h2 class="ds-heading">Other Skills</h2>
-            <ul class="ds-skills-list">
-              <li>Animation</li>
-              <li>Pixel Art</li>
-              <li>Web Design</li>
-              <li>Project Managment</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--  Skills -->
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
 
-   <!-- Experience -->
-   <div class="ds-experience-section">
-     <div class="container">
-        <h2 class="ds-heading">Work Experience</h2>
-        <div class="row ds-experience-list">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2020 - Present</span>
-                <h3 class="ds-officename">Reamda</h3>
-                <span class="ds-department">Software Developer</span>
-                <p>My main responsibilites are creating true to life simulations of Reamdas bomb disposal robots. These are realtime networked.</p>
-                <ul>
-                  <li>Using Unity's PhysX 4.0. </li>
-                  <li>With <a href="https://mirror-networking.gitbook.io/docs/">Mirror</a>  for networking.</li>
-                </ul>
-              </section>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2015 - 2019</span>
-                <h3 class="ds-officename">Kongregate</h3>
-                <span class="ds-department">Browser Game Developer</span>
-                <p>As an Indie Dev I developed browser games.</p>
-                <ul>
-                  <li>Idle, "play while you are away" and real time multiplayer shooters.</li>
-                </ul>
-              </section>
-            </div>
-        </div>
-     </div>
-   </div>
-    <!-- Experience -->
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+        mobileWarning.style.display = "block";
+        setTimeout(() => {
+          mobileWarning.style.display = "none";
+        }, 5000);
+      } else {
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+      loadingBar.style.display = "block";
 
-   <!--  Work -->
-   <div class="ds-work-section">
-     <div class="container">
-          <h2 class="ds-heading">Latest works</h2>
-          <div class="ds-work-list-section">
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Upwork</h3>
-                          <p>Your next interactive experience. Hire me.</p>
-                          <a href="https://www.upwork.com/freelancers/~01f9567a5a32e3cfe4" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-l-5 col-xl-5 col-xxl-5">
-                      <figure><a href="https://www.upwork.com/freelancers/~01f9567a5a32e3cfe4"><img src="assets/images/1599933755862.gif" class="zoom"></a></figure>
-                  </div>
-              </div>
-            </div>
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Robotic Sims</h3>
-                          <p>Working for private companies in industry. I develop real-time networked robotic sims. They even have VR support.</p>
-                          <a href="https://reamda.com/" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                    <figure><a href="https://reamda.com/"><img src="assets/images/robotmove.gif" class="zoom"></a></figure>
-                  </div>
-              </div>
-            </div>
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                        <h3 class="ds-work-tilte">Impact Point</h3>
-                        <p>With over 100K in total plays, and one of Kongregate's highest rated multiplayer games of all time. Impact Point is a fast paced browser shooter very similar to the likes of Hotline Miami</p>
-                        <a href="https://www.kongregate.com/games/AwesometacularVG/impact-point" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                    <figure><a href="https://www.kongregate.com/games/AwesometacularVG/impact-point"><img src="assets/images/ezgif.com-gif-maker.gif" class="zoom"></a></figure>
-                  </div>
-              </div>
-            </div>
-          </div>
-     </div>
-   </div>
-   <!--  Work -->
-
-   <!--  footer -->
-   <footer class="ds-footer text-center">
-     <div class="container">
-        <section>
-          <span>Stay in touch</span>
-          <h4>Ready for your next interactive app?</h4>
-          <p></p>
-          <p>Find me on Upwork</p>
-          <a href="https://www.upwork.com/freelancers/~01f9567a5a32e3cfe4" class="ds-button">Hire Me</a>
-        </section>
-        <span class="ds-copyright">© 2022 All rights reserved. Yusuf Qureshi</a>.</span>
-     </div>
-   </footer>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-    <script src="assets/js/main.js"></script>
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
   </body>
 </html>
